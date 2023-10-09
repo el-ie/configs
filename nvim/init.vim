@@ -325,6 +325,8 @@ let mapleader = ";"
 set mouse=a
 set hlsearch
 set timeoutlen=200
+set splitright
+set splitbelow
 
 vnoremap <C-c> :!xclip -selection clipboard<Cr><esc>u
 
@@ -341,7 +343,7 @@ inoremap <C-b> <esc>:bnext<cr>
 """"""""""""""" split vim """""""""""""""""
 
 "ouvrir un split
-nnoremap <leader>v :vertical split useless_file<cr>
+nnoremap <leader>v :vs useless_file<cr>
 nnoremap <leader>h :split useless_file<cr>
 
 "Navigation entre les split vim
