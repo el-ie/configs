@@ -30,6 +30,7 @@ require("telescope").setup {
 		-- Hint: Make sure that color is currently set to 'never'
 		vimgrep_arguments = {
 			'rg',				-- ripgrep program
+			'--no-ignore',
 			'--color=never',	-- specify when to use colors in output
 			'--no-heading',		-- don't show matches grouped by file name
 			'--with-filename',	-- show file name for matches
@@ -37,8 +38,8 @@ require("telescope").setup {
 			'--column',			-- show column numbers for matches
 			'--smart-case',		-- search case-insensitively if pattern is all lowercase
 			'--trim',			-- trim any ASCII whitespace prefix from each line
-			'--ignore-file',
-			'.gitignore'
+			--'--ignore-file',
+			--'.gitignore'
 		},
 		-- lua regex
 		file_ignore_patterns = { "%.DS_Store", "%.o", "%.d, %.asd, %.wav, %.aiff" }

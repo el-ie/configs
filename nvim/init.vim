@@ -354,11 +354,11 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 
 "Redimenssionner les split
-nnoremap <C-u> <C-w>+
-nnoremap <C-i> <C-w>-
+nnoremap <C-i> <C-w>+
+nnoremap <C-o> <C-w>-
 
-nnoremap <S-u> <C-w><
-nnoremap <S-i> <C-w>>
+nnoremap <S-i> <C-w><
+nnoremap <S-o> <C-w>>
 
 "Sessions vim pour enregistrer les fenetres ouvertes
 nnoremap <C-m><C-k> :mksession!<cr>
