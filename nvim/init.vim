@@ -340,6 +340,10 @@ inoremap <C-b> <esc>:bnext<cr>
 
 """"""""""""""" split vim """""""""""""""""
 
+"ouvrir un split
+nnoremap <leader>v :vertical split<cr>
+nnoremap <leader>h :split<cr>
+
 "Navigation entre les split vim
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
