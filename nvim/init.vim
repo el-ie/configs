@@ -317,24 +317,54 @@ colorscheme base2tone_sea_dark
 au BufEnter * set fo-=c fo-=r fo-=o
 
 
+"""""""""""""""""""""" REGLAGES PERSO """""""""""""""""""""""""""""""
+
+"""""""""" Options principales """"""""""""
+
 let mapleader = ";"
-
-
 set mouse=a
 set hlsearch
-
+set timeoutlen=200
 
 vnoremap <C-c> :!xclip -selection clipboard<Cr><esc>u
 
 nnoremap <C-n> :NvimTreeToggle<cr>
+
 nnoremap <leader>ff :Telescope find_files<cr>
 nnoremap <leader>lg :Telescope live_grep<cr>
 nnoremap <leader>fb :NvimTreeToggle<cr>
 
-
+"""""""""""""""" Buffers """"""""""""""""""
 nnoremap <C-b> <esc>:bnext<cr>
 inoremap <C-b> <esc>:bnext<cr>
 
-nnoremap <C-d> :q<cr>
+""""""""""""""" split vim """""""""""""""""
 
+"Navigation entre les split vim
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+
+"Redimenssionner les split
+nnoremap <C-u> <C-w>+
+nnoremap <C-i> <C-w>-
+
+nnoremap <S-u> <C-w><
+nnoremap <S-i> <C-w>>
+
+"Sessions vim pour enregistrer les fenetres ouvertes
+nnoremap <C-m><C-k> :mksession!<cr>
+
+""""""""" Manipulation des fichiers """"""""
+
+"Quitter
+nnoremap <C-d> :q<cr>
+nnoremap <C-d><C-d> :qa<cr>
+nnoremap <C-d><C-d><C-f> :qa!<cr>
+
+"Enregistrer
 nnoremap <C-s> :w<cr>
+nnoremap <C-s><C-s><C-f> :wa<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""
