@@ -1,0 +1,44 @@
+
+
+
+
+
+"syn match cppNumber		display contained "\<0\(y\|d\)\>"
+"syn match cppNumber		display contained "\<[1-9]\('\=\d\+\)*\(y\|d\)\>"
+"syn match cppNumber		display contained "\<0\o\+\(y\|d\)\>"
+"syn match cppNumber		display contained "\<0b[01]\('\=[01]\+\)*\(y\|d\)\>"
+"syn match cppNumber		display contained "\<0x\x\('\=\x\+\)*\(y\|d\)\>"
+"
+"syn keyword cppStatement	co_await co_return co_yield requires
+"syn keyword cppModule		import module export
+"
+"syn region cppRawString	matchgroup=cppRawStringDelimiter start=+\%(u8\|[uLU]\)\=R"\z([[:alnum:]_{}[\]#<>%:;.?*\+\-/\^&|~!=,"']\{,16}\)(+ end=+)\z1"\(sv\|s\|_[_a-zA-Z][_a-zA-Z0-9]*\)\=+ contains=@Spell
+"
+"syn match cppNumbers		display transparent "\<\d\|\.\d" contains=cppNumber,cppFloat
+"syn match cppNumber		display contained "\<0\([Uu]\=\([Ll]\|LL\|ll\)\|\([Ll]\|LL\|ll\)\=[Uu]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppNumber		display contained "\<[1-9]\('\=\d\+\)*\([Uu]\=\([Ll]\|LL\|ll\)\|\([Ll]\|LL\|ll\)\=[Uu]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppNumber		display contained "\<0\o\+\([Uu]\=\([Ll]\|LL\|ll\)\|\([Ll]\|LL\|ll\)\=[Uu]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppNumber		display contained "\<0b[01]\('\=[01]\+\)*\([Uu]\=\([Ll]\|LL\|ll\)\|\([Ll]\|LL\|ll\)\=[Uu]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppNumber		display contained "\<0x\x\('\=\x\+\)*\([Uu]\=\([Ll]\|LL\|ll\)\|\([Ll]\|LL\|ll\)\=[Uu]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppFloat		display contained "\<\d\+\.\d*\(e[-+]\=\d\+\)\=\([FfLl]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppFloat		display contained "\<\.\d\+\(e[-+]\=\d\+\)\=\([FfLl]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppFloat		display contained "\<\d\+e[-+]\=\d\+\([FfLl]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn region cppString		start=+\(L\|u\|u8\|U\)\="+ skip=+\\\\\|\\"\|\\$+ excludenl end=+"\(sv\|s\|_\i*\)\=+ end='$' contains=cSpecial,cFormat,@Spell
+"
+"syn match cppFloat		display contained "\<0x\x*\.\x\+p[-+]\=\d\+\([FfLl]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"syn match cppFloat		display contained "\<0x\x\+\.\=p[-+]\=\d\+\([FfLl]\|i[fl]\=\|h\|min\|s\|ms\|us\|ns\|_\i*\)\=\>"
+"
+"syn match cppCharacter	"u8'[^\\]'"
+"syn match cppCharacter	"u8'[^']*'" contains=cSpecial
+"syn match cppSpecialError	  "u8'\\[^'\"?\\abefnrtv]'"
+"syn match cppSpecialCharacter "u8'\\['\"?\\abefnrtv]'"
+"syn match cppSpecialError	  "u8'\\[^'\"?\\abfnrtv]'"
+"syn match cppSpecialCharacter "u8'\\['\"?\\abfnrtv]'"
+"syn match cppSpecialCharacter display "u8'\\\o\{1,3}'"
+"syn match cppSpecialCharacter display "u8'\\x\x\+'"
+
+
+
+
+
+
