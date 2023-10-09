@@ -107,4 +107,7 @@ lazy.setup {
 	{
 		'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
 	},
+	{
+		'https://github.com/pineapplegiant/spaceduck'
+	},
 }

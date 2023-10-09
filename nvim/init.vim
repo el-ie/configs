@@ -145,7 +145,7 @@ set showcmd
 "set noruler
 "set sidescrolloff=300
 set scrolloff=50
-set nowrap
+set wrap
 set nolinebreak
 
 "set wildmenu
@@ -309,7 +309,8 @@ syntax on
 set termguicolors
 "colorscheme tokyonight-moon
 "colorscheme base2tone_space_dark
-colorscheme base2tone_sea_dark
+"colorscheme base2tone_sea_dark
+colorscheme spaceduck
 
 
 " delete comment characters when joining lines
@@ -372,5 +373,9 @@ nnoremap <C-d><C-d><C-f> :qa!<cr>
 "Enregistrer
 nnoremap <C-s> :w<cr>
 nnoremap <C-s><C-s><C-f> :wa<cr>
+
+""""""""""""""""""' LSP """""""""""""""""""
+
+nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
