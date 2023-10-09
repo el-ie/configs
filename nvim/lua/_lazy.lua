@@ -104,4 +104,7 @@ lazy.setup {
 	{
 		'https://github.com/atelierbram/Base2Tone-nvim'
 	},
+	{
+		'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
+	},
 }
