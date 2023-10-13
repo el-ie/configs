@@ -360,6 +360,11 @@ nnoremap <C-o> <C-w>-
 nnoremap <S-i> <C-w><
 nnoremap <S-o> <C-w>>
 
+"Focus sur un split (ouvre le split dans une nouvelle tab)
+
+nnoremap <leader>n <esc>:tab split<cr>:vsplit useless<cr><C-w><C-r>50<C-w><<C-w>l
+nnoremap <leader>nn <esc>:tabc<cr>
+
 "Sessions vim pour enregistrer les fenetres ouvertes
 nnoremap <C-m><C-k> :mksession!<cr>
 
@@ -379,6 +384,3 @@ nnoremap <C-s><C-s><C-f> :wa<cr>
 nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-
-nnoremap <leader>n <esc>:tab split<cr>:vsplit useless<cr><C-w><C-r>50<C-w><<C-w>l
-nnoremap <leader>nn <esc>:tabc<cr>
