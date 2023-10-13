@@ -325,7 +325,7 @@ au BufEnter * set fo-=c fo-=r fo-=o
 let mapleader = ";"
 set mouse=a
 set hlsearch
-set timeoutlen=200
+set timeoutlen=300
 set splitright
 set splitbelow
 
@@ -379,3 +379,6 @@ nnoremap <C-s><C-s><C-f> :wa<cr>
 nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>n <esc>:tab split<cr>:vsplit useless<cr><C-w><C-r>50<C-w><<C-w>l
+nnoremap <leader>nn <esc>:tabc<cr>
