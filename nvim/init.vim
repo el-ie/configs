@@ -354,11 +354,11 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 
 "Redimenssionner les split
-nnoremap <C-i> <C-w>+
-nnoremap <C-o> <C-w>-
+nnoremap <S-i> <C-w>+
+nnoremap <S-o> <C-w>-
 
-nnoremap <S-i> <C-w><
-nnoremap <S-o> <C-w>>
+nnoremap <C-i> <C-w><
+nnoremap <C-o> <C-w>>
 
 "Focus sur un split (ouvre le split dans une nouvelle tab)
 
