@@ -110,4 +110,7 @@ lazy.setup {
 	{
 		'https://github.com/pineapplegiant/spaceduck'
 	},
+	{
+		'https://github.com/123Untitled/nvim-ucg'
+	},
 }

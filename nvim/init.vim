@@ -384,3 +384,8 @@ nnoremap <C-s><C-s><C-f> :wa<cr>
 nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>e :silent UcgGenerate<cr>
+
+
+colorscheme ucg
