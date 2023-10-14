@@ -1,0 +1,64 @@
+#!/bin/bash
+echo '------------------------------------------'
+echo '|            GIT STATUS BEFORE           |'
+echo '------------------------------------------'
+
+cd ~/configs && git status
+
+echo '------------------------------------------'
+echo '|        COPYING FILES...                |'
+echo '------------------------------------------'
+
+cp -r ~/.config/nvim ~/configs
+
+echo '------------------------------------------'
+echo '|            STATUS AFTER COPY           |'
+echo '------------------------------------------'
+
+echo $PWD
+cd ~/configs && git status
+
+echo '------------------------------------------'
+echo '|               ADD FILES ?              |'
+echo '------------------------------------------'
+
+read -p "[y/n] " answer
+
+# Check the answer
+case $answer in
+    [Yy]* ) echo "You chose to continue";;
+    [Nn]* ) echo "You chose to exit"; exit;;
+    * ) echo "Bad Input";;
+esac
+
+cd ~/configs && git add .
+
+echo '------------------------------------------'
+echo '|             STATUS AFTER ADD           |'
+echo '------------------------------------------'
+
+cd ~/configs && git status
+
+
+echo '------------------------------------------'
+echo '|                 PUSH ?                 |'
+echo '------------------------------------------'
+
+read -p "[y/n] " answer
+
+# Check the answer
+case $answer in
+    [Yy]* ) echo "You chose to continue";;
+    [Nn]* ) echo "You chose to exit"; exit;;
+    * ) echo "Bad Input";;
+esac
+
+read -p "PLEAS ENTER COMMIT MESSAGE: " commit_message
+
+cd ~/configs && git commit -m "script push_nvim_config $commit_message" && git push
+
+echo '------------------------------------------'
+echo '|            PUSH SUCCESFULL             |'
+echo '------------------------------------------'
+
+cd ~/configs && git status
