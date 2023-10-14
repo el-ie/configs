@@ -333,9 +333,9 @@ vnoremap <C-c> :!xclip -selection clipboard<Cr><esc>u
 
 nnoremap <C-n> :NvimTreeToggle<cr>
 
-nnoremap <leader>ff :Telescope find_files<cr>
-nnoremap <leader>lg :Telescope live_grep<cr>
-nnoremap <leader>fb :NvimTreeToggle<cr>
+nnoremap <leader>f :Telescope find_files<cr>
+nnoremap <leader>l :Telescope live_grep<cr>
+"nnoremap <leader>fb :NvimTreeToggle<cr>
 
 """""""""""""""" Buffers """"""""""""""""""
 nnoremap <C-b> <esc>:bnext<cr>
@@ -344,7 +344,7 @@ inoremap <C-b> <esc>:bnext<cr>
 """"""""""""""" split vim """""""""""""""""
 
 "ouvrir un split
-nnoremap <leader>v :vs useless_file<cr>
+nnoremap <leader>hh :vs useless_file<cr>
 nnoremap <leader>h :split useless_file<cr>
 
 "Navigation entre les split vim
@@ -368,6 +368,13 @@ nnoremap <leader>nn <esc>:tabc<cr>
 "Sessions vim pour enregistrer les fenetres ouvertes
 nnoremap <C-m><C-k> :mksession!<cr>
 
+
+""""""""""""""" split tabs """""""""""""""""
+
+nnoremap <leader>p <esc>:tabnext<cr>
+nnoremap <leader>pp <esc>:tabprevious<cr>
+nnoremap <leader>ppp <esc>:tabnew<cr>
+
 """"""""" Manipulation des fichiers """"""""
 
 "Quitter
@@ -385,7 +392,7 @@ nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <leader>e :silent UcgGenerate<cr>
+"nnoremap <leader>e :silent UcgGenerate<cr>
 
 
-colorscheme ucg
+"colorscheme ucg
