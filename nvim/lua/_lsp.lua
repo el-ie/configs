@@ -14,6 +14,22 @@ local lsp_flags = {
 
 -- on_attach function for all language servers
 local on_attach = function(client, bufnr)
+
+	----BEGIN TEST:
+	--  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+	--  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+	--
+	--    -- Enable completion triggered by <c-x><c-o>
+ -- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+	--
+ -- -- Mappings
+ -- local opts = { noremap = true, silent = true }
+	--
+ --   buf_set_keymap('n', '<leader>b', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+	--
+ -- ----END TEST
+ -- -- FAILURE
+
 	-- get the active client
 	--local client = vim.lsp.get_active_clients()[1]
 	-- disable token semantic highlighting
