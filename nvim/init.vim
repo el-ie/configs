@@ -344,8 +344,8 @@ inoremap <C-b> <esc>:bnext<cr>
 """"""""""""""" split vim """""""""""""""""
 
 "ouvrir un split
-nnoremap <leader>hh :vs useless_file<cr>
-nnoremap <leader>h :split useless_file<cr>
+nnoremap <leader>j :vs useless_file<cr>
+nnoremap <leader>jj :split useless_file<cr>
 
 "Navigation entre les split vim
 nnoremap <C-h> <C-w><C-h>
@@ -366,7 +366,8 @@ nnoremap <leader>n <esc>:tab split<cr>:vsplit useless<cr><C-w><C-r>50<C-w><<C-w>
 nnoremap <leader>nn <esc>:tabc<cr>
 
 "Sessions vim pour enregistrer les fenetres ouvertes
-nnoremap <C-m><C-k> :mksession!<cr>
+"nnoremap <C-m><C-k> :mksession!<cr>
+nnoremap <leader>mk :mksession!<cr>
 
 
 """"""""""""""" split tabs """""""""""""""""
@@ -378,17 +379,25 @@ nnoremap <leader>ppp <esc>:tabnew<cr>
 """"""""" Manipulation des fichiers """"""""
 
 "Quitter
-nnoremap <C-d> :q<cr>
-nnoremap <C-d><C-d> :qa<cr>
-nnoremap <C-d><C-d><C-f> :qa!<cr>
+"nnoremap <C-d> :q<cr>
+nnoremap <leader>d :q<cr>
+
+"nnoremap <C-d><C-d> :qa<cr>
+nnoremap <leader>dd :qa<cr>
+
+"nnoremap <C-d><C-d><C-f> :qa!<cr>
+nnoremap <leader>ddf :qa!<cr>
 
 "Enregistrer
-nnoremap <C-s> :w<cr>
-nnoremap <C-s><C-s><C-f> :wa<cr>
+"nnoremap <C-s> :w<cr>
+nnoremap <leader>s
+
+"nnoremap <C-s><C-s><C-f> :wa<cr>
+nnoremap <leader>ssf :wa<cr>
 
 """"""""""""""""""' LSP """""""""""""""""""
 
-nnoremap <leader>j :lua vim.lsp.buf.hover()<cr>
+nnoremap <leader>h :lua vim.lsp.buf.hover()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
