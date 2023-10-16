@@ -372,9 +372,9 @@ nnoremap <leader>mk :mksession!<cr>
 
 """"""""""""""" split tabs """""""""""""""""
 
-nnoremap <leader>p <esc>:tabnext<cr>
-nnoremap <leader>pp <esc>:tabprevious<cr>
-nnoremap <leader>ppp <esc>:tabnew<cr>
+nnoremap <leader>kk <esc>:tabnext<cr>
+nnoremap <leader>kj <esc>:tabprevious<cr>
+nnoremap <leader>kn <esc>:tabnew<cr>
 
 """"""""" Manipulation des fichiers """"""""
 
