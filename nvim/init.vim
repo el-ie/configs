@@ -387,17 +387,17 @@ nnoremap <leader>ki <esc>:tabmove -1<cr>
 
 "Quitter
 "nnoremap <C-d> :q<cr>
-nnoremap <leader>d :q<cr>
+nnoremap <leader>q :q<cr>
 
 "nnoremap <C-d><C-d> :qa<cr>
-nnoremap <leader>dd :qa<cr>
+nnoremap <leader>qq :qa<cr>
 
 "nnoremap <C-d><C-d><C-f> :qa!<cr>
-nnoremap <leader>ddf :qa!<cr>
+nnoremap <leader>qqf :qa!<cr>
 
 "Enregistrer
 "nnoremap <C-s> :w<cr>
-nnoremap <leader>s
+nnoremap <leader>s :w<cr>
 
 "nnoremap <C-s><C-s><C-f> :wa<cr>
 nnoremap <leader>ssf :wa<cr>
