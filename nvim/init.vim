@@ -347,6 +347,10 @@ inoremap <C-b> <esc>:bnext<cr>
 nnoremap <leader>j :vs useless_file<cr>
 nnoremap <leader>jj :split useless_file<cr>
 
+" Pour que le split ne resplit pas le split actuel mais s'effectue en dehors des autres
+nnoremap <leader>jk :botright vs useless_file<cr>
+nnoremap <leader>jjk :botright split useless_file<cr>
+
 "Navigation entre les split vim
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
