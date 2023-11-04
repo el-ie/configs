@@ -117,6 +117,9 @@ lazy.setup {
 		'https://github.com/natecraddock/sessions.nvim'
 	},
 	{
+		'https://github.com/xiyaowong/transparent.nvim'
+	},
+	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		init = function()
