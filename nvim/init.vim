@@ -410,6 +410,11 @@ nnoremap <leader>ssf :wa<cr>
 
 nnoremap <leader>h :lua vim.lsp.buf.hover()<cr>
 
+""""""""""""" SCRIPTS BASH """"""""""
+
+""Transcendance : kill google chrome et lancer 2 nouvelles fenetres avec 2 utilisateurs
+nnoremap <C-l> :!jjjkill<cr><cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 "nnoremap <leader>e :silent UcgGenerate<cr>
