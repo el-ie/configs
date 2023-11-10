@@ -1,0 +1,8 @@
+
+cp -r ~/copy2brains ~/goinfre/2brains
+cd ~/goinfre/2brains/backend
+npm install
+cd ~/goinfre/2brains/frontend
+npm install
+cd ~/goinfre/2brains
+docker-compose up --build

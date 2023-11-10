@@ -1,0 +1,7 @@
+
+while true; do
+cp -r ~/goinfre/2brains/backend/src ~/copy2brains/backend
+cp -r ~/goinfre/2brains/frontend/src ~/copy2brains/frontend
+echo 'copying brains'
+sleep 1
+done
