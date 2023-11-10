@@ -10,22 +10,35 @@ alias nestcmd='/mnt/nfs/homes/eamar/bin/nest/node_modules/.bin/nest'
 alias Aconf="type Aconf && vim ~/.config/nvim/init.vim"
 
 	#aliases for transcandance
-alias pp="type pp && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml"
+alias pp="type pp && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml"
 alias ps="type ps && docker ps"
 
-alias Ago="type Ago && cd /mnt/nfs/homes/eamar/fusion/requirements/nestjs/app"
-alias Agoo="type Agoo && cd /mnt/nfs/homes/eamar/fusion/requirements/nestjs/app/src"
 	#Postgres
 alias "Apost"="type Apost && docker exec -it nestjs_container bash"
-alias "Adbrm"="type Adbrm && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml rm -f -v -s postgres_service"
-alias "Adbstart"="type Adbstart && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml start postgres_service"
-alias "Adbrestart"="type Adbrestart && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml restart postgres_service"
+alias "Adbrm"="type Adbrm && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml rm -f -v -s postgres_service"
+alias "Adbstart"="type Adbstart && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml start postgres_service"
+alias "Adbrestart"="type Adbrestart && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml restart postgres_service"
 alias "Adbagain"="type Adbagain && Adbrm && Adbstart && sleep 0.3 && Adeploy"
 	#Nestjs
 alias Anest="type Anest && docker exec -it nestjs_container bash"
-alias Adeploy="type Adeploy && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml exec nestjs_service sh -c 'cd /app && npx prisma migrate deploy'"
-alias Astudio="type Astudio && docker-compose --file /mnt/nfs/homes/eamar/fusion/docker-compose.yml exec nestjs_service sh -c 'cd /app && npx prisma studio'"
-alias Alogs="type Alogs && while true; do; docker logs nestjs_container; sleep 0.2; done"
+alias Adeploy="type Adeploy && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml exec nestjs_service sh -c 'cd /app && npx prisma migrate deploy'"
+alias Astudio="type Astudio && docker-compose --file /mnt/nfs/homes/eamar/goinfre/2brains/docker-compose.yml exec nestjs_service sh -c 'cd /app && npx prisma studio'"
+
+alias Alogsn="type Alogsn && while true; do; docker logs back; sleep 0.2; done"
+
+alias Agon="type Agon && cd /mnt/nfs/homes/eamar/goinfre/2brains/backend"
+alias Agoon="type Agoon && cd /mnt/nfs/homes/eamar/goinfre/2brains/backend/src"
+
+	#React
+alias Areact="type Areact && docker exec -it react_container bash"
+alias Alogsr="type Alogsr && while true; do; docker logs front; sleep 0.2; done"
+
+alias Agor="type Agor && cd /mnt/nfs/homes/eamar/goinfre/2brains/frontend"
+alias Agoor="type Agoor && cd /mnt/nfs/homes/eamar/goinfre/2brains/frontend/src"
+
+# racine projet
+alias Ago="type Agoon && cd /mnt/nfs/homes/eamar/goinfre/2brains"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -36,6 +49,8 @@ export PATH=$HOME/bin/nvim-linux64/bin:$PATH
 export PATH=$HOME/bin/node_modules/.bin:$PATH
 export PATH=$HOME/bin/fd:$PATH
 
+#diff-so-fancy
+export PATH=$HOME/bin/diff-so-fancy:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
