@@ -5,6 +5,7 @@
 # only one argument with the text for a temporary conversation
 # two argument to create or go back to a chat
 
+
 if [ $# -eq 2 ]; then
 chat="$1"
 prompt="$2"
@@ -15,6 +16,10 @@ chat="temp"
 prompt="$1"
 fi
 
+intro_temp="This is a question on assembly x86_64 (x64) : ${prompt}"
+
+intro_permanant="I will ask you question on assembly x86_64 (x64), I am a developper"
+
 echo "[$chat] - [$prompt]"
 echo '-----------'
 
@@ -23,7 +28,7 @@ echo '-----------'
 ############# TEMPORARY chat ############
 
 if [ "$chat" = "temp" ]; then
-sgpt --chat temp "This is a question on assembly x86_64 (x64) : $prompt"
+sgpt --chat temp "$intro_temp"
 else
 
 #############  PERMANENT chat ############
@@ -35,7 +40,7 @@ chat_exist=$(sgpt --show-chat "$chat" | wc -c) # 0 if chat doesn t exist, some n
 if [ "$chat_exist" = "0" ];
 then
 echo "new chat"
-sgpt --chat "$chat" "I will ask you question on assembly x86_64 (x64), I am a developper" >/dev/null
+sgpt --chat "$chat" "$intro_permanant" >/dev/null
 fi
 
 # finally sending the prompt
