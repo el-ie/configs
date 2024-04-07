@@ -1,18 +1,16 @@
 #/bin/bash
 
-#Non-interactive chat version
+#Interactive chat version
 #This script is designed to work with sgpt to facilitate the prompts
 
 # only one argument with the text for a temporary conversation
 # two argument to create or go back to a chat
 
-#If two arguments saving both in variables
 if [ $# -eq 2 ]; then
 chat="$1"
 prompt="$2"
 fi
 
-#Only one argument for temporary chat
 if [ $# -eq 1 ]; then
 chat="temp"
 prompt="$1"
@@ -22,6 +20,7 @@ intro_temp="This is a question on assembly x86_64 (x64) : ${prompt}"
 
 intro_permanant="I will ask you question on assembly x86_64 (x64), I am a developper"
 
+
 echo "[$chat] - [$prompt]"
 echo '-----------'
 
@@ -29,14 +28,20 @@ echo '-----------'
 
 ############# TEMPORARY chat ############
 
+touch intro_temp_file
+echo $intro_temp > intro_temp_file
+
 if [ "$chat" = "temp" ]; then
-sgpt --chat temp "$intro_temp"
+# only way that seems to work to send an introduction in temporary interactive
+cat intro_temp_file - | sgpt --repl temp
+rm intro_temp_file
 exit
 fi
 
 #############  PERMANENT chat ############
 
-chat_exist=$(sgpt --show-chat "$chat" | wc -c) # 0 if chat doesn t exist, some number if it does
+ # 0 if chat doesn t exist, some number if it does
+chat_exist=$(sgpt --show-chat "$chat" | wc -c)
 
 
 # If the chat doesn't exist we give the intro
@@ -46,6 +51,8 @@ echo "new chat"
 sgpt --chat "$chat" "$intro_permanant" >/dev/null
 fi
 
-# finally sending the prompt
-sgpt --chat "$chat" "$prompt"
+#send prompt
+sgpt --chat "$chat" "$prompt" >/dev/null
+#launch chat
+sgpt --repl "$chat"
 
